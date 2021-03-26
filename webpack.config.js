@@ -1,17 +1,21 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'main.js',
+    filename: 'index.js',
     publicPath: 'dist/',
   },
   devServer: {
     overlay: true,
     port: 8080,
   },
+  plugins: [
+    new HtmlWebpackPlugin({template: './src/index.html'})
+  ],
   module: {
     rules: [
       {
