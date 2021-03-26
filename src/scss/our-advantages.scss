@@ -1,0 +1,151 @@
+@import './src/scss/partials/_mixins';
+@import './src/scss/partials/_media-queries.scss';
+
+.our-advantages {
+  background-color: #2f2f2f;
+}
+
+.our-advantages-wrapper {
+  max-width: 1600px;
+  display: flex;
+  margin: 0 auto;
+  padding: 90px 215px 90px 50px;
+
+  @include media(1400px) {
+    padding: 90px 50px;
+  }
+
+  @include media-lg {
+    padding: 50px;
+  }
+
+  @include media-md {
+    padding: 50px 10px;
+  }
+
+  img {
+    width: 60%;
+    max-width: 800px;
+    display: block;
+    flex-shrink: 3;
+    @include objectFit(cover);
+
+    @include media-lg {
+      display: none;
+    }
+  }
+
+  .advantages-info {
+    width: 100%;
+    max-width: 585px;
+    flex-shrink: 1;
+
+    @include media-lg {
+      margin: 0 auto;
+    }
+
+    > .title {
+      max-width: 285px;
+      margin: 0 0 60px 70px;
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.2;
+      color: #fff;
+
+      @include media-lg {
+        margin: 0 auto 60px auto;
+        text-align: center;
+      }
+
+      .color-orange {
+        color: #fc9e20;
+      }
+    }
+
+    .advantages {
+      li {
+        position: relative;
+        margin: 0 0 50px 235px;
+
+        @include media-xl {
+          margin: 0 0 50px 120px;
+        }
+
+        @include media-lg {
+          margin: 0 0 50px 95px;
+        }
+
+        @include media-sm {
+          margin: 0 0 50px 0;
+        }
+
+        &:nth-child(1)::before {
+          background: url('/src/img/advantages/Icon1.png') center no-repeat;
+        }
+
+        &:nth-child(2)::before {
+          background: url('/src/img/advantages/Icon2.png') center no-repeat;
+        }
+
+        &:nth-child(3)::before {
+          background: url('/src/img/advantages/Icon3.png') center no-repeat;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: '';
+          width: 85px;
+          height: 85px;
+          position: absolute;
+          top: 0;
+          left: -155px;
+
+          @include media-xl {
+            left: -100px;
+          }
+
+          @include media-sm {
+            top: -18px;
+            left: 0;
+          }
+        }
+
+        .title {
+          margin-bottom: 15px;
+          font-size: 18px;
+          font-weight: 900;
+          text-transform: uppercase;
+          color: #fff;
+
+          @include media-md {
+            font-size: 24px;
+          }
+  
+          @include media-sm {
+            margin: 0 0 30px 95px;
+            font-size: 28px;
+          }
+        }
+
+        .description {
+          font-size: 18px;
+          font-weight: normal;
+          color: #9b9b9b;
+
+          @include media-md {
+            font-size: 24px;
+          }
+  
+          @include media-sm {
+            font-size: 28px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

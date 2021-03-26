@@ -1,0 +1,225 @@
+@import './src/scss/partials/_mixins';
+@import './src/scss/partials/_media-queries.scss';
+
+.services {
+  background-color: #fff;
+}
+
+.services-wrapper {
+  max-width: 1600px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 215px;
+
+  @include media-xl {
+    padding-left: 50px;
+  }
+
+  @include media-lg {
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  @include media-md {
+    padding: 50px 10px;
+  }
+
+  .about-services {
+    width: 100%;
+    max-width: 445px;
+    margin: 90px 0;
+    padding-right: 170px;
+
+    @include media-lg {
+      max-width: 600px;
+      margin: 0;
+      padding-right: 0;
+    }
+
+    .title {
+      max-width: 240px;
+      margin: 0 0 30px auto;
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: right;
+      line-height: 1.2;
+      color: #000;
+
+      @include media-lg {
+        margin: 0 auto 30px auto;
+        text-align: center;
+      }
+
+      .color-orange {
+        color: #fc9e20;
+      }
+    }
+
+    .description {
+      max-width: 290px;
+      margin-bottom: 40px;
+      font-size: 24px;
+      font-weight: normal;
+      text-align: right;
+      line-height: 1.2;
+      color: #040404;
+
+      @include media-lg {
+        max-width: 100%;
+        margin: 0 auto 40px auto;
+        text-align: center;
+      }
+
+      @include media-sm {
+        font-size: 28px;
+      }
+
+      .font-lighter {
+        font-weight: lighter;
+      }
+    }
+
+    .btn-read-more {
+      margin-left: auto;
+
+      @include media-lg {
+        margin: 0 auto 20px auto;
+      }
+
+      &:focus {
+        box-shadow: 0 0 3px 1px #383738;
+      }
+    }
+  }
+
+  .services-bg-wrapper {
+    width: 100%;
+    max-width: 940px;
+    position: relative;
+    background: url('/src/img/services/services-bg.jpg') center/cover no-repeat;
+
+    @include media-lg {
+      width: auto;
+      max-width: 1020px;
+      margin: 0 -10px;
+      background: none;
+    }
+
+    @include media-md {
+      margin: 0 -5px;
+    }
+
+    .services-list {
+      width: 100%;
+      max-width: 920px;
+      height: 86%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      margin: 7% 0;
+      background-color: #2f2f2f;
+      @include transform( translateX(-70px));
+
+      @include media-lg {
+        margin: 0;
+        @include transform( translateX(0));
+        background-color: transparent;
+      }
+
+      li {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 40px;
+        padding-top: 115px;
+
+        @include media-xl {
+          width: calc(50% - 40px);
+          margin: 20px;
+        }
+
+        @include media-lg {
+          width: calc(50% - 20px);
+          margin: 10px;
+          padding: 135px 10px 20px 10px;
+          background-color: #2f2f2f;
+        }
+
+        @include media-md {
+          width: calc(50% - 10px);
+          margin: 5px;
+        }
+
+        @include media-sm {
+          width: 100%;
+        }
+
+        &::before {
+          content: '';
+          width: 86px;
+          height: 86px;
+          position: absolute;
+          top: 0;
+          left: calc(50% - 43px);
+
+          @include media-lg {
+            top: 20px;
+          }
+        }
+
+        &:nth-child(1)::before {
+          background: url('/src/img/services/Icon3.png') center/cover no-repeat;
+        }
+
+        &:nth-child(2)::before {
+          background: url('/src/img/services/Icon1.png') center/cover no-repeat;
+        }
+
+        &:nth-child(3)::before {
+          background: url('/src/img/services/Icon2.png') center/cover no-repeat;
+        }
+
+        &:nth-child(4)::before {
+          background: url('/src/img/services/Icon3.png') center/cover no-repeat;
+        }
+
+        .title {
+          margin-bottom: 15px;
+          font-size: 18px;
+          font-weight: 900;
+          text-transform: uppercase;
+          text-align: center;
+          color: #fba419;
+
+          @include media-md {
+            font-size: 24px;
+          }
+  
+          @include media-sm {
+            font-size: 28px;
+          }
+        }
+
+        .description {
+          margin: auto 0;
+          font-size: 18px;
+          font-weight: lighter;
+          text-align: center;
+          color: #9b9b9b;
+
+          @include media-md {
+            font-size: 24px;
+          }
+  
+          @include media-sm {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import './src/scss/partials/_fonts';
+@import './src/scss/partials/_mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  min-width: 320px;
+  background-color: #2f2f2f;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px #fff;
+  }
+}
+
+.btn-read-more {
+  width: 180px;
+  min-height: 50px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 30px;
+  background-color: #fba419;
+  color: #fff;
+  cursor: pointer;
+  @include transition(all, .2s, ease-in-out);
+
+  &:hover {
+    background-color: #383738;
+    color: #fba419;
+    box-shadow: 0 0 0 1px #fba419 inset;
+  }
+}
