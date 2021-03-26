@@ -66,15 +66,15 @@
       }
 
       &:nth-child(1)::before {
-        background: url('./img/footer/Icon1.png') center no-repeat;
+        background: url('/src/img/footer/Icon1.png') center no-repeat;
       }
 
       &:nth-child(2)::before {
-        background: url('./img/footer/Icon2.png') center no-repeat;
+        background: url('/src/img/footer/Icon2.png') center no-repeat;
       }
 
       &:nth-child(3)::before {
-        background: url('./img/footer/Icon3.png') center no-repeat;
+        background: url('/src/img/footer/Icon3.png') center no-repeat;
       }
 
       &::before {

@@ -98,7 +98,7 @@
     width: 100%;
     max-width: 940px;
     position: relative;
-    background: url('./img/services/services-bg.jpg') center/cover no-repeat;
+    background: url('/src/img/services/services-bg.jpg') center/cover no-repeat;
 
     @include media-lg {
       width: auto;
@@ -172,19 +172,19 @@
         }
 
         &:nth-child(1)::before {
-          background: url('./img/services/Icon3.png') center/cover no-repeat;
+          background: url('/src/img/services/Icon3.png') center/cover no-repeat;
         }
 
         &:nth-child(2)::before {
-          background: url('./img/services/Icon1.png') center/cover no-repeat;
+          background: url('/src/img/services/Icon1.png') center/cover no-repeat;
         }
 
         &:nth-child(3)::before {
-          background: url('./img/services/Icon2.png') center/cover no-repeat;
+          background: url('/src/img/services/Icon2.png') center/cover no-repeat;
         }
 
         &:nth-child(4)::before {
-          background: url('./img/services/Icon3.png') center/cover no-repeat;
+          background: url('/src/img/services/Icon3.png') center/cover no-repeat;
         }
 
         .title {

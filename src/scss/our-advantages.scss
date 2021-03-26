@@ -81,15 +81,15 @@
         }
 
         &:nth-child(1)::before {
-          background: url('./img/advantages/Icon1.png') center no-repeat;
+          background: url('/src/img/advantages/Icon1.png') center no-repeat;
         }
 
         &:nth-child(2)::before {
-          background: url('./img/advantages/Icon2.png') center no-repeat;
+          background: url('/src/img/advantages/Icon2.png') center no-repeat;
         }
 
         &:nth-child(3)::before {
-          background: url('./img/advantages/Icon3.png') center no-repeat;
+          background: url('/src/img/advantages/Icon3.png') center no-repeat;
         }
 
         &:last-child {
