@@ -1,4 +1,3 @@
-# Digital - landing page for web design agency
 
 ### Features
 - Has 8 different sections
